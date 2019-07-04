@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+    <div>
+        <div class="ChangeElem_Btn_Content">
+            <button class="ChangeElem_Btn is-active">Blogger</button>
+            <button class="ChangeElem_Btn">Soundcloud</button>
+            <button class="ChangeElem_Btn">Tumblr</button>
+            <button class="ChangeElem_Btn">Youtube</button>
+            <button class="ChangeElem_Btn">Vimeo</button>
+        </div>
+
+        <ul>
+            <li class="ChangeElem_Panel" style="display: list-item;">
+                <div>
+                    <iframe src="https://tsrknt.blogspot.com/" width="99%" height="9999"></iframe>
+                </div>
+            </li>
+            <!--//<blogger>-->
+
+
+            <li class="ChangeElem_Panel" style="display: none;">
+                <div>
+                    <iframe width="99%" height="9999" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/21006441/favorites&color=%23150809&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                  </iframe>
+                </div>
+            </li>
+            <!--<soundcloud>-->
+
+            <li class="ChangeElem_Panel" style="display: none;">
+                <div>
+                    <iframe src="https://naototsuruoka.tumblr.com/" width="99%" height="9999"></iframe>
+                </div>
+            </li>
+            <!--<tumblr>-->
+
+            <li class="ChangeElem_Panel" style="display: none;">
+                <div>
+                    <iframe width="99%" height="1300" src="https://www.youtube.com/embed/videoseries?list=FLnb4mkeSuLFLFUgWpQsyYog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </li>
+            <!--<youtube>-->
+
+            <li class="ChangeElem_Panel" style="display: none;">
+                <div>
+                    <iframe src="https://player.vimeo.com/video/128883827?color=ffffff&byline=0&portrait=0" width="99%" height="800" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </li>
+            <!--<vimeo>-->
+
+
+        </ul>
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+
+    <script>
+        $(function() {
+            /*初期表示*/
+            $('.ChangeElem_Panel').hide();
+            $('.ChangeElem_Panel').eq(0).show();
+            $('.ChangeElem_Btn').eq(0).addClass('is-active');
+            /*クリックイベント*/
+            $('.ChangeElem_Btn').each(function() {
+                $(this).on('click', function() {
+                    var index = $('.ChangeElem_Btn').index(this);
+                    $('.ChangeElem_Btn').removeClass('is-active');
+                    $(this).addClass('is-active');
+                    $('.ChangeElem_Panel').hide();
+                    $('.ChangeElem_Panel').eq(index).show();
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+
+</html>
