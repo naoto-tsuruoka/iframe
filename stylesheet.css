@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*CSS Document*/
+
+body{
+    background: #000;
+}
+
+/*タブの中身を初期非表示に*/
+.ChangeElem_Panel {
+  display: none;
+}
+
+/*タブを横並べに*/
+.ChangeElem_Btn_Content {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*通常時のタブ装飾*/
+.ChangeElem_Btn {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex: 1;
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  transition: all .3s ease-in-out;
+  vertical-align: middle;
+}
+
+/*カレントとホバー時のタブ装飾*/
+.ChangeElem_Btn:hover,
+.ChangeElem_Btn.is-active {
+  background: #000;
+  border: none;
+  box-sizing: border-box;
+  color: #00ffff;
+}
+
+ul li{
+    list-style: none;
+}
