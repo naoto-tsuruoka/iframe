@@ -5,7 +5,7 @@ body{
     background: #000;
 }
 
-/*タブの中身を初期非表示に*/
+/*タブの中身を初期非表示*/
 .ChangeElem_Panel {
   display: none;
 }
