@@ -39,6 +39,7 @@ body{
   border: none;
   box-sizing: border-box;
   color: #00ffff;
+  outline: 0;
 }
 
 ul li{
